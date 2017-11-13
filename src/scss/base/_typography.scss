@@ -1,0 +1,15 @@
+body {
+  font-size: 13px;
+  font-family: "Arial", sans-serif;
+  letter-spacing: -0.025em;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+@mixin heading-1 {
+  font-size: 22px;
+  font-weight: bold;
+  @include breakpoint(md) {
+    font-size: 36px;
+  }
+}

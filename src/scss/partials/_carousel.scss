@@ -1,0 +1,86 @@
+$ns: '.carousel';
+
+$carousel-height: 674px;
+
+#{$ns} {
+  &__item {
+    background-color: $background-color;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include breakpoint(md) {
+      background-size: auto;
+    };
+    &.django {
+      background-image: url('/assets/django.png');
+    }
+    &.vizio {
+      background-image: url('/assets/vizio.png');
+    }
+    &.earth {
+      background-image: url('/assets/earth.png');
+    }
+  }
+
+  &__content {
+    width: 100%;
+    height: $carousel-height * 0.5;
+    @include breakpoint(sm) {
+      height: $carousel-height * 0.75;
+    }
+    @include breakpoint(md) {
+      height: $carousel-height;
+    }
+  }
+
+  &__container {
+    position: relative;
+  }
+
+  &__arrows {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 10px;
+    margin: 0 auto;
+    height: 40px;
+
+    @include breakpoint(md) {
+      right: 30px;
+      width: 1000px;
+    }
+  }
+
+  &__prev, &__next {
+    position: absolute;
+    bottom: 20px;
+    cursor: pointer;
+    height: 32px;
+  }
+
+  &__prev {
+    right: 50px;
+    transform: scaleX(-1);
+  }
+  &__next {
+    right: 0;
+  }
+
+}
+
+
+.slick-dots {
+  bottom: 20px;
+}
+.slick-dots li button:before {
+  color: white;
+  font-size: 13px;
+  opacity: 1;
+}
+.slick-dots li button:hover {
+
+}
+.slick-dots li.slick-active button:before {
+  color: $primary-color;
+  opacity: 1;
+}

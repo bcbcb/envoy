@@ -1,0 +1,39 @@
+$ns: '.wire';
+
+#{$ns} {
+  margin-bottom: 80px;
+
+  &__container {
+    @include grid-container;
+    margin: 0 auto;
+    @include breakpoint(md) {
+      width: 1000px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+    @include grid-column(12);
+    @include breakpoint(md) {
+      @include grid-column(4);
+    }
+  }
+
+  &__title {
+    @include heading-1
+    color: $white;
+    margin-bottom: 5px;
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+
+  &__date {
+    color: $light-grey;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+}

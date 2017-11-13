@@ -1,0 +1,31 @@
+$ns: '.sentence';
+
+#{$ns} {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__container {
+    @include grid-container;
+    @include breakpoint(md) {
+      width: 1000px;
+    }
+  }
+
+  &__text {
+    @include grid-column(12);
+    @include heading-1;
+    line-height: 0.9;
+    border-bottom: 6px solid $dark-grey;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    @include breakpoint(md) {
+      margin-top: 40px;
+      margin-bottom: 72px;
+      padding-bottom: 40px;
+    }
+
+  }
+
+}

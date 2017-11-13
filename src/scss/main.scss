@@ -1,0 +1,26 @@
+@import "bourbon";
+@import "neat";
+
+@import "base/reset";
+@import "base/grid";
+@import "base/typography";
+@import "base/colors";
+@import "base/breakpoints";
+
+@import "partials/header";
+@import "partials/carousel";
+@import "partials/sentence";
+@import "partials/section-header";
+@import "partials/featured";
+@import "partials/wire";
+
+body {
+  background: $background-color;
+  color: $white;
+}
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+  font-weight: bold;
+}
