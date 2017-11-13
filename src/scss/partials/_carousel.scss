@@ -12,13 +12,13 @@ $carousel-height: 674px;
       background-size: auto;
     };
     &.django {
-      background-image: url('./assets/django.png');
+      background-image: url('../assets/django.png');
     }
     &.vizio {
-      background-image: url('./assets/vizio.png');
+      background-image: url('../assets/vizio.png');
     }
     &.earth {
-      background-image: url('./assets/earth.png');
+      background-image: url('../assets/earth.png');
     }
   }
 
