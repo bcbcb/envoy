@@ -130,11 +130,11 @@ body {
     .carousel__item {
       background-size: auto; } }
   .carousel__item.django {
-    background-image: url("/assets/django.png"); }
+    background-image: url("./assets/django.png"); }
   .carousel__item.vizio {
-    background-image: url("/assets/vizio.png"); }
+    background-image: url("./assets/vizio.png"); }
   .carousel__item.earth {
-    background-image: url("/assets/earth.png"); }
+    background-image: url("./assets/earth.png"); }
 
 .carousel__content {
   width: 100%;
