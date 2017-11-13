@@ -165,7 +165,8 @@ body {
   position: absolute;
   bottom: 20px;
   cursor: pointer;
-  height: 32px; }
+  height: 32px;
+  z-index: 1; }
 
 .carousel__prev {
   right: 50px;
@@ -175,7 +176,8 @@ body {
   right: 0; }
 
 .slick-dots {
-  bottom: 20px; }
+  bottom: 20px;
+  z-index: 1; }
 
 .slick-dots li button:before {
   color: white;
