@@ -226,16 +226,11 @@
 <script>
 $(document).ready(function () {
   $('.carousel__slick').slick({
-    arrows: false,
-    dots: true
+    dots: true,
+    prevArrow: '.carousel__prev',
+    nextArrow: '.carousel__next',
   });
 
-  $('.carousel__prev').click(function () {
-    $('.carousel__slick').slick('slickPrev');
-  });
-  $('.carousel__next').click(function () {
-    $('.carousel__slick').slick('slickNext');
-  });
 });
 </script>
 
