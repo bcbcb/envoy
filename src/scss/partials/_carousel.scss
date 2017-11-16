@@ -20,6 +20,7 @@ $ns: '.carousel';
   }
 
   &__prev, &__next {
+    user-select: none;
     position: absolute;
     bottom: 20px;
     cursor: pointer;
