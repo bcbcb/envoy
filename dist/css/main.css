@@ -111,15 +111,18 @@ body {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none; }
-    .header__nav-item a {
-      padding: 10px 50px;
-      color: white; }
-      .header__nav-item a:hover {
-        color: #e34e33; }
     @media (min-width: 992px) {
       .header__nav-item {
         display: inline;
         margin-left: 2em; } }
+  .header__nav-item a {
+    padding: 10px 50px;
+    color: white; }
+    .header__nav-item a:hover {
+      color: #e34e33; }
+    @media (min-width: 992px) {
+      .header__nav-item a {
+        padding: 0; } }
   @media (max-width: 991px) {
     .header__nav.open {
       display: -webkit-box;

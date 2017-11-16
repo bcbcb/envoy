@@ -52,16 +52,21 @@ $ns: '.header';
     display: none;
     font-weight: bold;
     user-select: none;
-    & a {
-      padding: 10px 50px;
-      color: white;
-      &:hover {
-        color: $primary-color
-      }
-    }
+
     @include breakpoint(md) {
       display: inline;
       margin-left: 2em;
+    }
+  }
+
+  &__nav-item a {
+    padding: 10px 50px;
+    color: white;
+    &:hover {
+      color: $primary-color
+    }
+    @include breakpoint(md) {
+      padding: 0;
     }
   }
 
