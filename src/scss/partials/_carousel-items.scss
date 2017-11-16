@@ -1,0 +1,151 @@
+$ns: '.carousel';
+
+$carousel-height: 674px;
+
+#{$ns} {
+
+  &__item {
+    background-color: $background-color;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include breakpoint(md) {
+      background-size: auto;
+    };
+
+    &.django {
+      background-image: url('../assets/django.png');
+    }
+
+    &.vizio {
+      background-image: url('../assets/vizio.png');
+    }
+
+    &.escape {
+      background-image: url('../assets/escape.png');
+    }
+
+    &.ultra {
+      background-image: url('../assets/ultra.png');
+    }
+    
+  }
+
+  &__content {
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0,0,0,0.77);
+    height: $carousel-height * 0.5;
+
+    @include breakpoint(sm) {
+      height: $carousel-height * 0.75;
+    }
+
+    @include breakpoint(md) {
+      height: $carousel-height;
+      background-color: transparent;
+      width: 960px;
+      padding: 10px;
+    }
+
+    .vizio & {
+      align-items: flex-end;
+      padding-right: 10px;
+
+      @include breakpoint(sm) {
+        padding-right: 50px;
+      };
+
+      @include breakpoint(md) {
+        padding-right: 120px;
+      };
+    }
+
+  }
+
+  &__heading {
+    color: $primary-color;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 36px;
+    font-family: $secondaryFont;
+    margin-top: 70px;
+    margin-bottom: 10px;
+
+    @include breakpoint(sm) {
+      font-size: 50px;
+      margin-top: 60px;
+    }
+
+    @include breakpoint(md) {
+      font-size: 62px;
+      margin-bottom: 25px;
+    }
+
+    .django & {
+      @include breakpoint(md) {
+        margin-top: 200px;
+      }
+    }
+
+    .vizio & {
+      @include breakpoint(md) {
+        margin-top: 140px;
+        max-width: none;
+      }
+    }
+
+    .escape & {
+      color: $escapeColor;
+    }
+
+    .ultra & {
+      color: $ultraColor;
+    }
+
+  }
+
+  &__description {
+    color: $white;
+    font-size: 14px;
+    max-width: 360px;
+    line-height: 1.4;
+
+    @include breakpoint(md) {
+      font-size: 16px;
+      color: $light-grey;
+    }
+
+    & a {
+      font-weight: normal;
+    }
+
+    .vizio & {
+      max-width: 240px;
+
+      @include breakpoint(sm) {
+        max-width: 330px;
+      }
+
+      @include breakpoint(md) {
+        max-width: 410px;
+      }
+    }
+
+    .escape & {
+      color: $white;
+
+      a {
+        color: $escapeColor;
+      }
+    }
+
+    .ultra & a {
+      color: $ultraColor;
+    }
+  }
+
+}
