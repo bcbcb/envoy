@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -56,14 +57,26 @@ body {
   width: 100%;
   height: 60px;
   background-color: rgba(0, 0, 0, 0.8);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
   align-items: flex-end;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   position: absolute;
-  z-index: 1; }
+  z-index: 10; }
   .header__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
     align-items: flex-end;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: flex-start; }
     @media (min-width: 992px) {
       .header__container {
@@ -72,23 +85,61 @@ body {
     text-transform: uppercase;
     font-weight: bold;
     color: #9f9f9f;
-    font-size: 2rem;
+    font-size: 25px;
     font-family: "Impact", sans-serif;
     margin-bottom: 10px; }
   .header__nav {
-    display: none;
+    display: block;
     margin-bottom: 13px; }
+    .header__nav:before {
+      content: '☰';
+      color: #9f9f9f;
+      font-size: 25px;
+      position: absolute;
+      top: 20px;
+      right: 10px;
+      cursor: pointer; }
     @media (min-width: 992px) {
       .header__nav {
-        display: block; } }
+        display: block; }
+        .header__nav:before {
+          display: none; } }
   .header__nav-item {
-    display: inline;
-    font-weight: bold;
-    margin-left: 2em; }
+    display: none;
+    font-weight: bold; }
     .header__nav-item a {
       color: white; }
       .header__nav-item a:hover {
         color: #e34e33; }
+    @media (min-width: 992px) {
+      .header__nav-item {
+        display: inline;
+        margin-left: 2em; } }
+  @media (max-width: 991px) {
+    .header__nav.open {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.9);
+      width: 100%;
+      height: 100%;
+      padding-top: 80px; }
+      .header__nav.open:before {
+        content: '✕'; }
+    .header__nav.open .header__nav-item {
+      display: block;
+      margin-bottom: 2rem;
+      font-size: 24px; } }
   .header__buttons {
     background-color: #464646;
     margin-left: auto;
@@ -96,6 +147,8 @@ body {
     display: none; }
     @media (min-width: 992px) {
       .header__buttons {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex; } }
   .header__tweet-button {
     background-color: #464646;
@@ -103,8 +156,14 @@ body {
     font-weight: bold;
     width: 160px;
     height: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center; }
     .header__tweet-button svg {
       display: block;
@@ -117,8 +176,14 @@ body {
     height: 40px;
     color: #ffffff;
     font-size: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center; }
 
 .carousel__container {
@@ -145,6 +210,7 @@ body {
 
 .carousel__prev {
   right: 50px;
+  -webkit-transform: scaleX(-1);
   transform: scaleX(-1); }
 
 .carousel__next {
@@ -162,6 +228,9 @@ body {
 .slick-dots li.slick-active button:before {
   color: #e34e33;
   opacity: 1; }
+
+.slick-slide {
+  outline: none; }
 
 .carousel__item {
   background-color: #1d1d1d;
@@ -182,8 +251,13 @@ body {
 
 .carousel__content {
   margin: 0 auto;
-  padding: 20px;
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   background-color: rgba(0, 0, 0, 0.77);
   height: 337px; }
@@ -195,8 +269,10 @@ body {
       height: 674px;
       background-color: transparent;
       width: 960px;
-      padding: 10px; } }
+      padding: 0 10px; } }
   .vizio .carousel__content {
+    -webkit-box-align: end;
+    -ms-flex-align: end;
     align-items: flex-end;
     padding-right: 10px; }
     @media (min-width: 768px) {
@@ -209,7 +285,6 @@ body {
 .carousel__heading {
   color: #e34e33;
   text-transform: uppercase;
-  font-weight: bold;
   font-size: 36px;
   font-family: "Impact", sans-serif;
   margin-top: 70px;
@@ -221,14 +296,12 @@ body {
   @media (min-width: 992px) {
     .carousel__heading {
       font-size: 62px;
-      margin-bottom: 25px; } }
+      margin-bottom: 25px;
+      margin-top: 140px;
+      max-width: none; } }
   @media (min-width: 992px) {
     .django .carousel__heading {
       margin-top: 200px; } }
-  @media (min-width: 992px) {
-    .vizio .carousel__heading {
-      margin-top: 140px;
-      max-width: none; } }
   .escape .carousel__heading {
     color: #d48029; }
   .ultra .carousel__heading {
@@ -261,8 +334,14 @@ body {
     color: #2162bc; }
 
 .sentence {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center; }
   .sentence__container::after {
     clear: both;
@@ -292,7 +371,11 @@ body {
         padding-bottom: 40px; } }
 
 .section-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
   align-items: flex-end;
   padding-bottom: 20px;
   border-bottom: 1px solid #282828;
@@ -325,7 +408,12 @@ body {
     width: calc(100% - 40px);
     float: left;
     margin-left: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column; }
     @media (min-width: 992px) {
       .featured__item {
@@ -362,7 +450,12 @@ body {
       .wire__container {
         width: 1000px; } }
   .wire__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     margin-bottom: 40px;
     width: calc(100% - 40px);
