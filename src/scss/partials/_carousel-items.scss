@@ -29,12 +29,12 @@ $carousel-height: 674px;
     &.ultra {
       background-image: url('../assets/ultra.png');
     }
-    
+
   }
 
   &__content {
     margin: 0 auto;
-    padding: 20px;
+    padding: 0 20px;
     display: flex;
     flex-direction: column;
     background-color: rgba(0,0,0,0.77);
@@ -48,7 +48,7 @@ $carousel-height: 674px;
       height: $carousel-height;
       background-color: transparent;
       width: 960px;
-      padding: 10px;
+      padding: 0 10px;
     }
 
     .vizio & {
@@ -69,7 +69,6 @@ $carousel-height: 674px;
   &__heading {
     color: $primary-color;
     text-transform: uppercase;
-    font-weight: bold;
     font-size: 36px;
     font-family: $secondaryFont;
     margin-top: 70px;
@@ -83,18 +82,13 @@ $carousel-height: 674px;
     @include breakpoint(md) {
       font-size: 62px;
       margin-bottom: 25px;
+      margin-top: 140px;
+      max-width: none;
     }
 
     .django & {
       @include breakpoint(md) {
         margin-top: 200px;
-      }
-    }
-
-    .vizio & {
-      @include breakpoint(md) {
-        margin-top: 140px;
-        max-width: none;
       }
     }
 
