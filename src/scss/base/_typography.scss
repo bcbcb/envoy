@@ -1,6 +1,9 @@
+$primaryFont: "Arial", sans-serif;
+$secondaryFont: "Impact", sans-serif;
+
 body {
   font-size: 13px;
-  font-family: "Arial", sans-serif;
+  font-family: $primaryFont;
   letter-spacing: -0.025em;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
